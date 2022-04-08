@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" type="text/css" href={% static 'main/css/zero_style.css' %}/>
+	<link rel="stylesheet" type="text/css" href={% static "main/css/style.css" %}/>
+	
+</head>
+
+<body>
+	<div class="container">
+	<div class="header">
+		<div class="header_topper">
+			<div class="header_title"><a href="#">SITE</a></div>
+			<div class="header_menu">
+				<ul>
+					{% for m in main_menu %}
+					<li><a href="{% url m.url %}">{{m.title}}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+<div class="content">
+	<div class="left_menu">
+		
+	</div>
+	<div class="right_content">
+		{% block content %}
+		{% endblock %}
+		</div>
+		</div>
+</div>
+</body>
+</html>
