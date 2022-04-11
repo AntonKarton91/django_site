@@ -1,4 +1,5 @@
 {% load static %}
+{% load main_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +17,7 @@
 	<div class="header">
 		<div class="header_topper">
 			<div class="header_title"><a href="#">SITE</a></div>
-			<div class="header_menu">
-				<ul>
-					{% for m in main_menu %}
-					<li><a href="{% url m.url %}">{{m.title}}</a></li>
-					{% endfor %}
-				</ul>
-			</div>
+			{% show_main_menu key %}
 		</div>
 		
 	</div>

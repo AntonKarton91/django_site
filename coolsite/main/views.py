@@ -1,18 +1,33 @@
 from django.shortcuts import render, HttpResponse
 
-main_menu=[
-    {'title':'Главная', 'url':"home"},
-    {'title':'ДКО', 'url':"dko"},
-    {'title':'Отдел продаж', 'url':"prodaji"},
-    {'title':'Отдел снабжения', 'url':"snab"},
-]
+
 
 def index(request):
     context={
-        'main_menu':main_menu,
+        'key':'Главная'
     }
 
 
+    return render(request, 'main/index.html', context=context)
+
+def index_dko(request):
+    context={
+        'key':'ДКО'
+    }
+    return render(request, 'main/index.html', context=context)
+
+
+def index_prodaji(request):
+    context={
+        'key':'Отдел продаж'
+    }
+    return render(request, 'main/index.html', context=context)
+
+
+def index_snab(request):
+    context={
+        'key':'Отдел снабжения'
+    }
     return render(request, 'main/index.html', context=context)
 
 

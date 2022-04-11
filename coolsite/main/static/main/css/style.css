@@ -25,7 +25,10 @@ A {
 	
 }
 
-
+.selected{
+	color: gray;
+	font-size: 30px;
+}
 
 .header_menu ul{
 	height: 60px;
