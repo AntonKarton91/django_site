@@ -23,7 +23,14 @@
 	</div>
 <div class="content">
 	<div class="left_menu">
-		
+		<ul>
+			{% for m in side_bar %}
+
+			<li><a href="#">{{m.title}}</a></li>
+			
+			{% endfor %}
+		</ul>
+
 	</div>
 	<div class="right_content">
 		{% block content %}

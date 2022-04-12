@@ -1,10 +1,13 @@
 from django.shortcuts import render, HttpResponse
-
+# from models import SideBar
+from main.models import SideBar
 
 
 def index(request):
+    side_bar=SideBar.objects.all()
     context={
-        'key':'Главная'
+        'key':'Главная',
+        'side_bar':side_bar,
     }
 
 
