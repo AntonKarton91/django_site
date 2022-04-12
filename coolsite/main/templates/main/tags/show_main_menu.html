@@ -1,12 +1,12 @@
 <div class="header_menu">
-				<ul>
-					{% for m in main_menu %}
-					{% if key == m.title %}
-					<li class="selected">{{m.title}} </li>
-					{% else %}
-					<li><a href="{% url m.url %}">{{m.title}}</a></li>
-					{% endif %}
-					{% endfor %}
-				</ul>
+	<ul>
+		{% for m in main_menu %}
+		{% if key == m.title %}
+		<li class="selected">{{m.title}} </li>
+		{% else %}
+		<li><a href="{% url m.url %}">{{m.title}}</a></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
 
-			</div>
+</div>

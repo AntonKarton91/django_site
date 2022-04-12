@@ -1,17 +1,19 @@
 from django.shortcuts import render, HttpResponse
-# from models import SideBar
-from main.models import SideBar
+
+from main.models import SideBar, Blogs
 
 
 def index(request):
-    side_bar=SideBar.objects.all()
+
     context={
         'key':'Главная',
-        'side_bar':side_bar,
     }
-
-
     return render(request, 'main/index.html', context=context)
+
+def show_blog(request):
+    blogs=Blogs.objects.all()
+    return render(request, 'main/main_blogs.html', {'blogs':blogs})
+
 
 def index_dko(request):
     context={

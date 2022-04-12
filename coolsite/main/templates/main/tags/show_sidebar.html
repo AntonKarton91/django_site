@@ -1,0 +1,11 @@
+	<div class="left_menu">
+		<ul>
+
+			{% for m in side_bar %}
+
+			<li><a href="{% url m.link %}">{{m.title}}</a></li>
+			
+			{% endfor %}
+		</ul>
+
+	</div>

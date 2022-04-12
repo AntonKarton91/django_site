@@ -2,5 +2,9 @@
 {% load main_tags %}
 {% block content %}
 	{% show_sidebar %}
-	<div class="right_content">
+	{% for b in blogs %}
+	<ul>
+		<li>{{b.title}}</li>
+	</ul>
+	{% endfor %}
 {% endblock %}	
