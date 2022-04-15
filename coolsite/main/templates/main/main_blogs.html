@@ -1,10 +1,20 @@
 {% extends "main/base.html" %}
 {% load main_tags %}
 {% block content %}
+<div class="content">
 	{% show_sidebar %}
+	<ul class="blogs">
 	{% for b in blogs %}
-	<ul>
-		<li>{{b.title}}</li>
-	</ul>
+	
+		<li>
+			<h2>{{b.title}}</h2>
+			<br>
+			{{b.content}}
+			<hr>
+			<br>
+		</li>
+	
 	{% endfor %}
+</ul>
+</div>
 {% endblock %}	

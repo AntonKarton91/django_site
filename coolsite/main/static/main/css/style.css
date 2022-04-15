@@ -3,7 +3,7 @@ A {
 }
 
 .container {
-	max-width: 1300px;
+
 	width: 100%;
 	margin: auto;
 
@@ -18,7 +18,7 @@ A {
 	width: 100%;
 	font-size: 20px;
 	background-color: black;
-	border-radius: 8px;
+
 	color: white;
 	display: flex;
 	justify-content: space-between;
@@ -59,7 +59,6 @@ A {
 	width: 100%;
 	max-width: 1300px;
 	align-items: flex-start;
-	margin-top: 10px;
 }
 
 .left_menu{
@@ -67,10 +66,10 @@ A {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	width: 200px;
-	height: 300px;
+	width: 150px;
+	height: 100vh;
 	background-color: gray;
-	border-radius: 10px;
+
 	font-size: 15px;
 }
 .left_menu a {
@@ -89,4 +88,36 @@ A {
 	border-bottom: 1px solid black;
 	width: 100%;
 
+}
+
+.blogs{
+	max-width: 500px;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.blogs h2{
+	background-color: gray;
+
+}
+
+.blogs li{
+	margin-top: 10px;
+}
+
+.content div:nth-child(1){
+	width: 50px;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.form-button {
+    min-width: 200px;
+    font-size: 16px;
+    color: red;
 }

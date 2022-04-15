@@ -10,8 +10,6 @@ class SideBar(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse ()
 
 class ProductionCats(models.Model):
     cats=models.CharField(max_length=20)
@@ -42,3 +40,11 @@ class Contacts(models.Model):
     post=models.CharField(max_length=60)
     contacts=models.CharField(max_length=60)
     menu = models.ForeignKey('SideBar', on_delete=models.PROTECT, null=True)
+
+
+class Positions(models.Model):
+    '''Таблица должностей сотрудников'''
+    position=models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.position

@@ -18,8 +18,9 @@ def show_main_menu(key='Главная'):
         {'title': 'ДКО', 'url': "dko"},
         {'title': 'Отдел продаж', 'url': "prodaji"},
         {'title': 'Отдел снабжения', 'url': "snab"},
+        {'title': 'Регистрация', 'url': "registration"},
     ]
-    side_bar = SideBar.objects.all()
+
     return {'main_menu':main_menu, 'key':key,}
 
 

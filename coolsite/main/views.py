@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse
 
-from main.models import SideBar, Blogs
+from .models import SideBar, Blogs
+
+from .forms import RegistrationForm
 
 
 def index(request):
@@ -38,3 +40,20 @@ def index_snab(request):
 
 def pageNotFound(request, exception):
     return HttpResponse('Страница не найдена')
+
+def registration(request):
+
+    if request.method=='POST':
+        form = RegistrationForm(request.POST)
+    if form.is_valid():
+        print(form.cleaned_data)
+    else:
+        form = RegistrationForm
+
+
+
+    context = {
+        'key': 'Регистрация',
+        'form':form,
+    }
+    return render(request, 'main/registration.html', context=context)
