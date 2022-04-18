@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.views.generic import ListView
 
 from .models import SideBar, Blogs
 
@@ -12,9 +13,24 @@ def index(request):
     }
     return render(request, 'main/index.html', context=context)
 
-def show_blog(request):
-    blogs=Blogs.objects.all()
-    return render(request, 'main/main_blogs.html', {'blogs':blogs})
+class ShowBlog(ListView):
+    model=Blogs
+    template_name = 'main/main_blogs.html'
+    context_object_name = 'blogs'
+
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context=super().get_context_data(**kwargs)
+        print(context['blogs'][0].content)
+        return context
+
+
+
+
+
+# def show_blog(request):
+#     blogs=Blogs.objects.all()
+#     return render(request, 'main/main_blogs.html', {'blogs':blogs})
 
 
 def index_dko(request):

@@ -1,0 +1,10 @@
+{% extends "dko/base.html" %}
+{% block content %}
+
+	<div class="right_content">
+		<ul>
+		{% for d in equipments_list %}
+		<li>{{d.title}}</li>
+		</ul>
+		{% endfor %}
+{% endblock %}	

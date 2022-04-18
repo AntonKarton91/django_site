@@ -1,0 +1,34 @@
+{% load static %}
+{% load dko_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+	
+	
+</head>
+
+<body>
+	<div class="container">
+	<div class="header">
+		<div class="header_topper">
+			<div class="header_title"><a href="#">SITE</a></div>
+		<ul>
+		{% for m in main_menu %}
+		<li>{{m.title}}</li>
+		</ul>
+		{% endfor %}
+		</div>
+		
+	</div>
+
+
+		{% block content %}
+		{% endblock %}
+		</div>
+
+</body>
+</html>
