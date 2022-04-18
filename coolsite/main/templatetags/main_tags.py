@@ -15,7 +15,7 @@ register=template.Library()
 def show_main_menu(key='Главная'):
     main_menu = [
         {'title': 'Главная', 'url': "home"},
-        {'title': 'ДКО', 'url': "dko"},
+        {'title': 'ДКО', 'url': "main_dko"},
         {'title': 'Отдел продаж', 'url': "prodaji"},
         {'title': 'Отдел снабжения', 'url': "snab"},
         {'title': 'Регистрация', 'url': "registration"},

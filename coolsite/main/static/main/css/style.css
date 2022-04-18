@@ -2,20 +2,23 @@ A {
 	color: white;
 }
 
+body{
+	background:  linear-gradient(rgba(240, 240, 240, 1.0), rgba(230,230, 230, 1.0));
+}
 .container {
-
+	max-width: 1300px;
 	width: 100%;
 	margin: auto;
 
 }
 .header {
 	
+	width: 100%;
 	margin: auto;
 }
 
 .header_topper{
-	max-width: 1300px;
-	width: 100%;
+	
 	font-size: 20px;
 	background-color: black;
 
@@ -110,14 +113,34 @@ A {
 	width: 50px;
 }
 
-.form-label {
-    display: inline-block;
-    min-width: 150px;
-    vertical-align: top;
+
+.registration-window{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 300px;
+	height: 300px;
+	margin: 50px auto auto auto;
+	background:  linear-gradient(rgba(100, 100, 100, .50), rgba(50,50, 50, .50));
+
 }
 
-.form-button {
-    min-width: 200px;
-    font-size: 16px;
-    color: red;
+.registration-window h2{
+	color: white;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+
+.form-input{
+	background-color: rgba(0, 0, 0, 0);
+	border: 0.5px solid white;
+margin-left: 100px;
+width: 100px;}
+
+.reg_form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
 }

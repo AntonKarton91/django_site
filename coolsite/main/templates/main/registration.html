@@ -1,13 +1,29 @@
-{% extends "main/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href={% static 'main/css/zero_style.css' %}/>
+	<link rel="stylesheet" type="text/css" href={% static "main/css/style.css" %}/>
+</head>
+<body>
 
-{% block content %}
-<form action="{% url 'registration' %}" method="POST">
+<div class="registration-window">
+<p class='reg-title'	><h2>Регистрация нового работника</h2></p>
+<form class="reg_form" action="{% url 'registration' %}" method="POST" >
 {% csrf_token %}
 <div class="form-error">{{ form.non_field_errors }}</div>
 {% for f in form %}
-<p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+<div class="input-string"><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</div>
 <div class="form-error">{{ f.errors }}</div>
+<hr>
 {% endfor %}
 <button type="submit" class="form-button">Регистрация</button>
 </form>
-{% endblock %}	
+
+</div>
+
+</body>
+</html>

@@ -61,8 +61,8 @@ def registration(request):
 
     if request.method=='POST':
         form = RegistrationForm(request.POST)
-    if form.is_valid():
-        print(form.cleaned_data)
+        if form.is_valid():
+            print(form.cleaned_data)
     else:
         form = RegistrationForm
 
