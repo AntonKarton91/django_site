@@ -13,24 +13,39 @@
 </head>
 
 <body>
-	<div class="logo"></div>
+	
 	<div class="container">
-	<div class="header">
-		<div class="header_topper">
-			<div class="header_title"><a href="#">SITE</a></div>
-		<ul>
-		{% for m in main_menu %}
-		<li>{{m.title}}</li>
-		</ul>
-		{% endfor %}
+		<div class="header">
+
+			<div class="header_topper">
+
+				<div class="header_title">SITE</div>
+				<div class="header_nav">
+					<ul>
+						{% for m in main_menu %}
+						<li>{{m.title}}</li>
+					</ul>
+					{% endfor %}
+				</div>
+			
+			</div>		
 		</div>
-		
-	</div>
 
+		<div class="under">
+			<div class="side_bar">
+				<ul>
+				{% for m in dko_side_bar %}
+				<li>{{m.title}}</li>
+				</ul>
+				{% endfor %}
+				</div>
+			
+			<div class="content">
 
-		{% block content %}
-		{% endblock %}
+			{% block content %}
+			{% endblock %}
+			</div>
 		</div>
-
+	</div>	
 </body>
 </html>

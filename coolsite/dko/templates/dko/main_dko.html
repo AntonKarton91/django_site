@@ -1,12 +1,23 @@
 {% extends "dko/base.html" %}
 {% block content %}
-	<div class="side_bar">
-		<ul>
-			{% for m in side_bar %}
-			<li><a href="#">{{m.title}}</a></li>
+<div class="tasks">
+	<div class="employers">
+
+		{% for e in dko_emplyers %}
+		<div class="employer">
+		<a href="#">{{e.name}} {{e.surname}}</a>
+			<ul>
+			{% for t in tasks %}
+			{% if e.id == t.executor_id %}
+				<li>{{t.numder}}  {{t.description}}</li>	
+			{% endif %}
 			{% endfor %}
-		</ul>
+			</ul>
+		</div>
+		{% endfor %}		
+	</ul>
 	</div>
+</div>
 
 	
 {% endblock %}	
